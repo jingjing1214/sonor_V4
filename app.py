@@ -10,7 +10,7 @@ with st.sidebar:
     ingredients = st.text_input("請輸入冰箱食材（用逗號分隔）", "雞肉, 馬鈴薯, 絲瓜, 蛤蜊")
 
 if api_key:
-    st.subheader("🍽️ AI 食譜推薦（5 道創意命名料理）")
+    st.subheader("🍽️ AI 食譜推薦")
     if st.button("推薦食譜"):
         prompt = f"""我冰箱裡有：{ingredients}。
 請推薦我 5 道可以做的家常料理。每道料理請賦予有創意、有畫面感、有特色的名字（可加入形容詞、氣氛、料理方式）。請依下列格式清楚分段回覆：
