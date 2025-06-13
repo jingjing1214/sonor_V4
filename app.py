@@ -23,6 +23,7 @@ if api_key:
         with st.spinner("AI 正在構思創意料理中..."):
             recipes = ask_perplexity(api_key, prompt)
             st.session_state["last_recipes"] = recipes
+            st.markdown(recipes)
 
     if "last_recipes" in st.session_state:
         st.markdown(st.session_state["last_recipes"])
